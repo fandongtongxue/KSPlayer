@@ -6,7 +6,7 @@
 //
 
 import AVFoundation
-import FFmpegKit
+import _FFmpegKit
 import Libavformat
 
 public class FFmpegAssetTrack: MediaPlayerTrack {
