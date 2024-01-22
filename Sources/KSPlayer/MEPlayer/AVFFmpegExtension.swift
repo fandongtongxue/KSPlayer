@@ -1,5 +1,5 @@
 import CoreMedia
-import FFmpegKit
+import _FFmpegKit
 import Libavcodec
 import Libavfilter
 import Libavformat
