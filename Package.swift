@@ -21,7 +21,7 @@ let package = Package(
         .target(
             name: "KSPlayer",
             dependencies: [
-                .product(name: "FFmpegKit", package: "FFmpegKit"),
+                .product(name: "_FFmpegKit", package: "_FFmpegKit"),
 //                .product(name: "Libass", package: "FFmpegKit"),
 //                .product(name: "Libmpv", package: "FFmpegKit"),
                 "DisplayCriteria",
@@ -38,7 +38,10 @@ let package = Package(
         ),
     ]
 )
-
+package.dependencies += [
+    .package(url: "https://github.com/fandongtongxue/_FFmpegKit.git", branch: "main")
+]
+/*
 var ffmpegKitPath = FileManager.default.currentDirectoryPath + "/FFmpegKit"
 if !FileManager.default.fileExists(atPath: ffmpegKitPath) {
     ffmpegKitPath = FileManager.default.currentDirectoryPath + "../FFmpegKit"
@@ -65,3 +68,4 @@ if FileManager.default.fileExists(atPath: ffmpegKitPath + "/Package.swift") {
         .package(url: "https://github.com/kingslay/FFmpegKit.git", branch: "main"),
     ]
 }
+*/
